@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	
+    <meta charset="utf-8">
+    <title>Create Objects</title>
+
+    <meta name="title" content="TBC">
+    <meta name="description" content="Development fil created by GB">
+    
+    <meta name="author" content="Gingerblue Limitied">
+    <meta name="Copyright" content="Gingerblue Limitied" />
+  
+    <link rel="stylesheet" media="all" href="assets/css/reset.css"/>
+    <link rel="stylesheet" media="all" href="assets/css/text.css"/>
+    <link rel="stylesheet" media="all" href="assets/css/main.css"/>
+
+	<script type="text/template" id="details">		
+		<ul>
+		  <% _.each(details, function(detail){ %>
+		   <li><a href="#" class="item"><%= detail.id %> - <%= detail.firstname %> <%= detail.surname %></a></li> 
+		  <% }); %>
+		</ul>			
+	</script>
+
+</head>
+<body>
+
+	<div id="wrapper">
+
+		<div class="inner">
+
+			<h1>retrieve set of models</h1>
+
+			<div id="header">
+			</div>
+
+			<div id="manage">
+			</div>
+
+			<div id="lists">
+				
+			</div>
+
+			<div id="log">
+			</div>
+			<div id="data">
+			</div>
+
+			<footer>
+				<p>&#64; Joe Burton</p>
+			</footer>
+
+		</div>
+
+	</div>
+
+  <script type="text/javascript" src="assets/js/lib/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib/underscore.js"></script>
+	<script type="text/javascript" src="assets/js/lib/backbone.js"></script>
+	
+	<script type="text/javascript" src="assets/js/main.js"></script>
+	
+</body>
+</html>

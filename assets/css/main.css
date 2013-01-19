@@ -1,0 +1,108 @@
+/* 
+    Document   : main.js 
+    Description: Main style sheet: All browsers and
+*/
+
+
+body {
+    background: #E8E8E8;
+    -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes width: 992px; */
+}
+
+header, section, article {
+    margin: 0 auto;
+    min-height: 100px;
+}
+
+header {
+    background: #fff;    
+}
+
+article{
+    background: #fff;
+    margin-top: 24px;
+    display: inline-block;
+}
+
+footer{
+    margin-top: 10px;   
+}
+
+footer p {
+    padding: 7px 0 7px 0;
+}
+
+.alpha {
+    float: left;
+}
+
+.beta {
+    float: right;
+}
+	
+#wrapper {
+    max-width:480px;
+	background: #ccc;
+    margin: 0 auto;
+}
+
+.inner {
+    margin: 0 8px 0 8px;
+	padding: 0 5px 0 5px;
+}
+
+.list-form input {
+	padding: 10px;
+	margin: 5px 0 5px 0;
+	width: 95%;
+}
+
+ul {
+    padding-bottom: 0px;
+    margin: 0;
+}
+
+ol {
+    padding-bottom: 10px;
+    margin-left: 40px;
+}
+
+#lists ul ,
+#list-items ul  {
+	margin: 15px 0 10px 2px;
+}
+
+#lists ul  li,
+#list-items ul  li {
+	margin: 0 0 7px 0;
+	list-style: none;
+}
+
+button.new,
+button.save,
+button.delete,
+button.add {
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 10px;
+	margin:  0 0 0 0;
+}
+
+/* Landscape smartphone
+@media screen and (min-width: 480px) {
+    #wrapper {
+        max-width:480px;
+    }
+} */
+
+
+/* Portrait smartphone
+@media screen and (min-width: 150px) and (max-width: 479px) {
+    #wrapper {
+        max-width:320px;
+    }
+	.list-form input {
+		width: 95.5%;
+	}
+} */
