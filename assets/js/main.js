@@ -1,5 +1,8 @@
+/*
+Models and collection structure
+*/
+
 Contact = Backbone.Model.extend({
-	//urlRoot:"api/contacts",
 	defaults:{
 		id: null,
 		firstname: "",
@@ -15,40 +18,6 @@ ContactCollection = Backbone.Collection.extend({
 	url:"api/contacts"
 });
 
-AppRouter = Backbone.Router.extend({
-
-	routes:{
-		"":"list"
-	},
-
-	list:function () {
-
-		this.before();
-	
-	},
-	
-	before:function () {
-	
-		this.contactList = new ContactCollection();
-
-		this.contactList.fetch({
-
-			success:function () {
-
-				console.log({collection:app.contactList});
-				 
-				$('#lists').append(new ContactsView({collection:app.contactList}).render());
-
-			}
-
-		});
-	
-	}
-	
-});
-
-
-
 ContactsView = Backbone.View.extend({
     
 	el: $('#lists'),
@@ -57,17 +26,12 @@ ContactsView = Backbone.View.extend({
 
     render:function () {
 		
-        $(this.el).append(this.template( {details:this.collection.toJSON()} ));
+        $(this.el).append(this.template({details:this.collection.toJSON()}));
 
-    	console.log(this.collection);
-
-        //return this;
+    	//console.log(this.collection);
         
     }
 
 });
 
 
-
-app = new AppRouter();
-Backbone.history.start();
